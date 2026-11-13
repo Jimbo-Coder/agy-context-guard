@@ -1,0 +1,19 @@
+{
+  "context-guard-notifier": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python3 \"${PLUGIN_ROOT:-$HOME/.gemini/config/plugins/agy-context-guard}/scripts/context_monitor.py\" --hook",
+        "timeout": 5
+      }
+    ],
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "python3 \"${PLUGIN_ROOT:-$HOME/.gemini/config/plugins/agy-context-guard}/scripts/context_monitor.py\" --hook --post",
+        "timeout": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agy-context-guard": {
+      "command": "python3",
+      "args": ["./scripts/mcp_context_server.py"]
+    }
+  }
+}
